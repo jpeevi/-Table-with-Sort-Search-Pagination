@@ -7,7 +7,7 @@ When I start a PHP project from scratch to visualize data in a tabular format, I
 
 This project is a **simple, interactive table template** that lets you manage and display large datasets with ease. The backend is rendered with **PHP**, and the frontend functionalities like sorting, searching, filtering, and pagination are powered by **vanilla JavaScript**. It’s built with **Bootstrap** to keep the styling clean and responsive. All actions manage state even after refresh. 
 
-Do not that the backned PHP code is just for render purpose only. You'll have to add the sort , filter and search logics.
+Please note that the backend PHP code is only for rendering the table. You'll need to implement the sorting, filtering, and searching logic.
 
 ### ✨ Features:
 - **Sorting**: Sort your table by column with a simple click.
