@@ -53,7 +53,7 @@ $currentPageData = array_slice($data, $offset, $itemsPerPage);
             ?>
             <div class="col-md-3">
                 <select onchange="manageFilterChange(event,'<?php echo $_currentFilterable['key']; ?>')"
-                        id="woo_rzp_recon_filter_"<?php echo $_currentFilterable['key']; ?> class="form-select">
+                        id="simple_table_template_filter_"<?php echo $_currentFilterable['key']; ?> class="form-select">
                     <option value=""><?php echo $_currentFilterable['display_name']; ?></option>
                     <?php
                     foreach ($_currentFilterable['values'] as $k => $v) {
@@ -81,7 +81,7 @@ $currentPageData = array_slice($data, $offset, $itemsPerPage);
     <div class="row mb-3">
         <div class="col-md-3">
             <select onchange="manageFilterChange(event,'<?php echo $_currentFilterable['key']; ?>')"
-                    id="woo_rzp_recon_filter_"<?php echo $_currentFilterable['key']; ?> class="form-select">
+                    id="simple_table_template_filter_"<?php echo $_currentFilterable['key']; ?> class="form-select">
                 <option value=""><?php echo $_currentFilterable['display_name']; ?></option>
                 <?php
                 foreach ($_currentFilterable['values'] as $k => $v) {
@@ -101,10 +101,10 @@ $currentPageData = array_slice($data, $offset, $itemsPerPage);
     <div class="row mb-3">
         <div class="col-md-5 d-flex align-items-center">
             <input value="<?php echo(isset($queryParams['search']) ? $queryParams['search'] : '') ?>" type="text"
-                   id="woo_rzp_recon_search" class="form-control me-2" placeholder="Search">
-            <button onclick="manageSearch(event)" id="woo_rzp_recon_search_btn" class="btn btn-primary me-2">Search
+                   id="simple_table_template_search" class="form-control me-2" placeholder="Search">
+            <button onclick="manageSearch(event)" id="simple_table_template_search_btn" class="btn btn-primary me-2">Search
             </button>
-            <button onclick="clearSearch(event)" id="woo_rzp_recon_clear_btn" class="btn btn-secondary">Clear</button>
+            <button onclick="clearSearch(event)" id="simple_table_template_clear_btn" class="btn btn-secondary">Clear</button>
         </div>
     </div>
 
@@ -123,9 +123,9 @@ $currentPageData = array_slice($data, $offset, $itemsPerPage);
                         <th>
                             <a onclick="manageSortDirection(event,'<?php echo $k; ?>')"
                                href="?sort=<?php echo $k; ?>&order=<?php echo $queryParams['order'] ?? 'asc'; ?>"
-                               id="woo_rzp_recon_sort_<?php echo $k; ?>" class="text-decoration-none">
+                               id="simple_table_template_sort_<?php echo $k; ?>" class="text-decoration-none">
                                 <?php echo $v; ?>
-                                <span class="woo_rzp_recon_sort_arrow">
+                                <span class="simple_table_template_sort_arrow">
                                         <?php echo (isset($queryParams['order']) && $queryParams['order'] === 'asc') ? '&#9650' : '&#9660'; ?>
                                     </span>
                             </a>
@@ -146,7 +146,7 @@ $currentPageData = array_slice($data, $offset, $itemsPerPage);
                 ?>
             </tr>
             </thead>
-            <tbody id="woo_rzp_recon_table_body">
+            <tbody id="simple_table_template_table_body">
             <?php
             foreach ($currentPageData as $i => $d) {
 
@@ -176,7 +176,7 @@ $currentPageData = array_slice($data, $offset, $itemsPerPage);
 
     <!--Pagination-->
     <div class="d-flex justify-content-between align-items-center">
-        <div id="woo_rzp_recon_pagination_meta">
+        <div id="simple_table_template_pagination_meta">
             <span>Total: <?php echo $totalItems; ?> items, Showing <?php echo $itemsPerPage; ?> items per page</span>
         </div>
         <nav>
@@ -216,7 +216,7 @@ $currentPageData = array_slice($data, $offset, $itemsPerPage);
     </div>
 
     <div class="mt-3">
-        <select onchange="manageFilterChange(event,'per_page')" id="woo_rzp_recon_per_page" class="form-select w-auto">
+        <select onchange="manageFilterChange(event,'per_page')" id="simple_table_template_per_page" class="form-select w-auto">
             <?php
             foreach ($perPageItems as $i => $pageItem) {
 

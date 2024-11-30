@@ -18,7 +18,7 @@ function manageSortDirection(event, key) {
     event.preventDefault();
     const element = event.currentTarget;
     const sortParams = new URLSearchParams(element.href);
-    const sortArrow = document.querySelector('.woo_rzp_recon_sort_arrow');
+    const sortArrow = document.querySelector('.simple_table_template_sort_arrow');
     const currentSortOrder = sortParams.get('order');
     let newSortOrder = "";
 
@@ -55,7 +55,7 @@ function managePagination(event, page) {
 
 function manageSearch(event) {
     event.preventDefault();
-    const search = document.getElementById('woo_rzp_recon_search').value;
+    const search = document.getElementById('simple_table_template_search').value;
     if (!isEmpty(search)) {
         updateAndRefreshCurrentPage({
             search: search
@@ -67,7 +67,7 @@ function manageSearch(event) {
 
 function clearSearch(event) {
     event.preventDefault();
-    const search = document.getElementById('woo_rzp_recon_search').value;
+    const search = document.getElementById('simple_table_template_search').value;
     search.value = "";
     removeQueryParamAndRefresh('search')
 }
