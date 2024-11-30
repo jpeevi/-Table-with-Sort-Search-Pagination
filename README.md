@@ -1,15 +1,18 @@
-# Simple Table with Sort, Search, Pagination
+# Simple Table with Sort, Search, Pagination & Filters
 
 ![image](https://github.com/user-attachments/assets/18c0f2c6-d365-4bf3-9b0f-0caf0ef82cee)
 
 
 When I start a PHP project from scratch to visualize data in a tabular format, I find it hectic to manage sorting, searching, and pagination on the frontend. Writing JavaScript and CSS can be pretty tiring and a bit of a drag. So, I created this template to make life easier! 🚀
 
-This project is a **simple, interactive table template** that lets you manage and display large datasets with ease. The backend is rendered with **PHP**, and the frontend functionalities like sorting, searching, filtering, and pagination are powered by **vanilla JavaScript**. It’s built with **Bootstrap** to keep the styling clean and responsive.
+This project is a **simple, interactive table template** that lets you manage and display large datasets with ease. The backend is rendered with **PHP**, and the frontend functionalities like sorting, searching, filtering, and pagination are powered by **vanilla JavaScript**. It’s built with **Bootstrap** to keep the styling clean and responsive. All actions manage state even after refresh. 
+
+Do not that the backned PHP code is just for render purpose only. You'll have to add the sort , filter and search logics.
 
 ### ✨ Features:
 - **Sorting**: Sort your table by column with a simple click.
 - **Searching**: Quickly filter through the data with a search bar.
+- **Filters**: Quickly filter through the data with dropdown filters.
 - **Pagination**: Navigate through large datasets with pagination controls.
 - **Lightweight & Simple**: No complex libraries—just good ol' PHP and vanilla JS!
 
