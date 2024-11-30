@@ -1,4 +1,4 @@
-# Simple Table with Sort, Search, Pagination & Filters
+# A Simple Starter Table Template with Sort, Search, Pagination & Filters
 
 ![image](https://github.com/user-attachments/assets/18c0f2c6-d365-4bf3-9b0f-0caf0ef82cee)
 
