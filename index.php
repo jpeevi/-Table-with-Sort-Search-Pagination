@@ -56,7 +56,7 @@ $queryParams = $_GET;
 
 
 $renderHelper->render(
-    'index',
+    'table',
     compact(
         'title',
         'columns',
