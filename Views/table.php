@@ -1,5 +1,6 @@
 <?php
 
+//Pagination logic
 $itemsPerPage = $queryParams['per_page'] ?? $perPageItems[0];
 
 
@@ -22,7 +23,7 @@ if ($currentPage < 1) {
 $offset = ($currentPage - 1) * $itemsPerPage;
 
 $currentPageData = array_slice($data, $offset, $itemsPerPage);
-
+//End of pagination logic
 
 ?>
 <!DOCTYPE html>
@@ -37,6 +38,7 @@ $currentPageData = array_slice($data, $offset, $itemsPerPage);
 <div class="container mt-5">
     <h2 class="mb-4"><?php echo $title ?></h2>
 
+    <!--Filters-->
     <div class="row mb-3">
         <?php
 
@@ -95,6 +97,7 @@ $currentPageData = array_slice($data, $offset, $itemsPerPage);
         ?>
     </div>
 
+    <!--Search-->
     <div class="row mb-3">
         <div class="col-md-5 d-flex align-items-center">
             <input value="<?php echo(isset($queryParams['search']) ? $queryParams['search'] : '') ?>" type="text"
@@ -171,6 +174,7 @@ $currentPageData = array_slice($data, $offset, $itemsPerPage);
         </table>
     </div>
 
+    <!--Pagination-->
     <div class="d-flex justify-content-between align-items-center">
         <div id="woo_rzp_recon_pagination_meta">
             <span>Total: <?php echo $totalItems; ?> items, Showing <?php echo $itemsPerPage; ?> items per page</span>

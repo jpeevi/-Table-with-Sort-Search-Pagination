@@ -15,6 +15,7 @@ $renderHelper = new RenderHelper();
 
 $title = "Page Title";
 
+//The column name and their display counterpart
 $columns = [
     'display_name' => 'Name',
     'user_email' => 'Email ID',
@@ -22,10 +23,12 @@ $columns = [
 
 ];
 
+//Columns that can be sorted
 $sortables = [
     'display_name'
 ];
 
+//Filters and their values
 $filterbales = [
     [
         'key' => 'user_status',
@@ -45,6 +48,7 @@ $filterbales = [
     ]
 ];
 
+//Per page item values to display
 $perPageItems = [
     10,
     20,
