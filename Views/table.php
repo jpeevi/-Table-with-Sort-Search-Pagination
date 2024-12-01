@@ -1,7 +1,7 @@
 <?php
 
 //Pagination logic
-$itemsPerPage = $queryParams['per_page'] ?? $perPageItems[0];
+$itemsPerPage = (int)($queryParams['per_page'] ?? $perPageItems[0]);
 
 
 if (isset($queryParams['page']) && is_numeric($queryParams['page'])) {
@@ -100,7 +100,7 @@ $currentPageData = array_slice($data, $offset, $itemsPerPage);
     <!--Search-->
     <div class="row mb-3">
         <div class="col-md-5 d-flex align-items-center">
-            <input value="<?php echo(isset($queryParams['search']) ? $queryParams['search'] : '') ?>" type="text"
+            <input value="<?php self::echo(isset($queryParams['search']) ? $queryParams['search'] : ''); ?>" type="text"
                    id="simple_table_template_search" class="form-control me-2" placeholder="Search">
             <button onclick="manageSearch(event)" id="simple_table_template_search_btn" class="btn btn-primary me-2">Search
             </button>
@@ -177,7 +177,7 @@ $currentPageData = array_slice($data, $offset, $itemsPerPage);
     <!--Pagination-->
     <div class="d-flex justify-content-between align-items-center">
         <div id="simple_table_template_pagination_meta">
-            <span>Total: <?php echo $totalItems; ?> items, Showing <?php echo $itemsPerPage; ?> items per page</span>
+            <span>Total: <?php self::echo($totalItems); ?> items, Showing <?php self::echo($itemsPerPage); ?> items per page</span>
         </div>
         <nav>
             <ul class="pagination">
@@ -234,7 +234,7 @@ $currentPageData = array_slice($data, $offset, $itemsPerPage);
     </div>
 </div>
 
-<script src="../Public/Assets/helper.js"></script>
+<script src="Assets/helper.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

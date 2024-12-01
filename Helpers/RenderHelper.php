@@ -5,6 +5,15 @@ class RenderHelper
 {
 
     /**
+     * @param string|int|float $data
+     * @return void
+     */
+    public static function echo(string|int|float $data) : void
+    {
+        echo htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
+    }
+
+    /**
      * @param string $view
      * @param array $data
      * @return void
