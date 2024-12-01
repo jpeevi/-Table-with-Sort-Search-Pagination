@@ -5,8 +5,8 @@ declare(strict_types=1);
 error_reporting(E_ALL);
 ini_set('display_errors', "1");
 
-require_once 'Helpers/RenderHelper.php';
-require_once 'sample_data.php';
+require_once dirname(__DIR__) . '/Helpers/RenderHelper.php';
+require_once dirname(__DIR__) . '/sample_data.php';
 
 use Helpers\RenderHelper;
 

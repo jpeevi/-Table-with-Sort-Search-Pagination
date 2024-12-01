@@ -36,6 +36,7 @@ You’re more than welcome to use this template in your projects! Feel free to c
 2. **Run the PHP file**:
    Navigate to your project folder and run the following command to start a local server:
    ```bash
+   cd Public
    php -S localhost:8000
    ```
 
